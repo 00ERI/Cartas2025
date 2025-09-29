@@ -1,0 +1,98 @@
+/* Fondo estilo mesa de poker */
+body {
+  background: radial-gradient(circle at center, #0b6623 0%, #054d1d 100%);
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+header {
+  padding: 15px;
+  text-align: center;
+  background: #111;
+  border-bottom: 3px solid #ffd700; /* dorado */
+}
+
+.img-logo {
+  max-height: 90px;
+}
+
+/* Cartas */
+.btncarta {
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btncarta img {
+  border: 2px solid #fff;
+  border-radius: 8px;
+}
+
+.btncarta:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px #ffd700;
+}
+
+/* Tabla */
+.table {
+  background: #222;
+  color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table th, .table td {
+  color: #fff;
+}
+
+/* Formularios */
+form {
+  margin-top: 15px;
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+label {
+  color: #ffd700;
+}
+
+#registrar {
+  margin-top: 10px;
+  background: #ffd700;
+  color: #111;
+  border: none;
+}
+
+#registrar:hover {
+  background: #ffcc33;
+}
+
+/* Login */
+.card {
+  margin-top: 100px;
+  background: #222;
+  color: #fff;
+  border-radius: 12px;
+  border: 2px solid #ffd700;
+}
+
+.login_btn {
+  width: 100%;
+  background: #ffd700;
+  color: #111;
+  font-weight: bold;
+}
+
+.login_btn:hover {
+  background: #ffcc33;
+}
+
+.img-thumbnail {
+  background: #0b6623 !important;  /* Fondo verde */
+  border: 2px solid #0b6623;       /* Borde blanco tipo carta */
+  border-radius: 10px;           /* Esquinas redondeadas */
+  padding: 5px;                  /* Espacio interno */
+}
+
