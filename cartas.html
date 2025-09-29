@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Cartas</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<meta charset="utf-8"> <!-- Define la codificación de caracteres -->
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Para que sea responsive -->
+	<title>Cartas</title> <!-- Título de la pestaña -->
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Estilos personalizados -->
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 </head>
 <body>
-<div class="container">
+<div class="container"> <!-- Contenedor principal -->
+
+	<!-- Encabezado con logo -->
 	<header class="bg-dark">
 		<div class="row">
 			<figure class="col-12 col-md-3"> 
@@ -16,13 +22,16 @@
 			</figure>
 		</div>
 	</header>
+
 	<div class="row">	
+		<!-- Sección de cartas -->
 		<div class="col-12 col-md-8 col-lg-6">
 			<div class="row">
-				<div class="btncarta col-6 col-md-4 col-lg-3" data-carta="1">
+				<!-- Botones de cartas (1 al 13) -->
+				<div class="btncarta col-6 col-md-4 col-lg-3" data-carta="A♦">
 					<img class="img-thumbnail" src="img/1.png" />
 				</div>
-				<div class="btncarta col-6 col-md-4 col-lg-3" data-carta="2">
+				<div class="btncarta col-6 col-md-4 col-lg-3" data-carta="2♦">
 					<img class="img-thumbnail" src="img/2.png" />
 				</div>
 				<div class="btncarta col-6 col-md-4 col-lg-3" data-carta="3">
@@ -60,47 +69,44 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- Panel lateral -->
 		<aside class="col-12 col-md-4 col-lg-6">
+
+			<!-- Listado de cartas -->
 			<section class="col-12">
 				<h2>Listado de Cartas</h2>
+				<!-- Botón para eliminar todas las cartas -->
+				<button id="eliminarTodo" class="btn btn-danger mb-2">Eliminar todas</button>
+				
+				<!-- Tabla dinámica -->
 				<table class="table table-hover">
 				  <thead>
 				    <tr>
-				      <th scope="col">#</th>
-				      <th scope="col">Carta</th>
-				      <th scope="col">Cant</th>
+				      <th scope="col">#</th> <!-- Número -->
+				      <th scope="col">Carta</th> <!-- Nombre -->
+				      <th scope="col">Cant</th> <!-- Cantidad -->
+				      <th scope="col">Acciones</th> <!-- Botones de acción -->
 				    </tr>
 				  </thead>
 				  <tbody id="listado">
-				    <tr>
-				      <th scope="row">1</th>
-				      <td>As</td>
-				      <td>3</td>
-				    </tr>
-				    <tr>
-				      <th scope="row">2</th>
-				      <td>2 de diamantes</td>
-				      <td>1</td>
-				    </tr>
-				    <tr>
-				      <th scope="row">3</th>
-				      <td>3 de picas</td>
-				      <td>4</td>
-				    </tr>
+				    <!-- Aquí se insertan filas dinámicamente -->
 				  </tbody>
 				</table>
 			</section>
+
+			<!-- Formulario para registrar cartas -->
 			<section class="col-12">
 				<h2>Registro de Cartas</h2>
 				<form>
 				  <div class="form-group">
-				    <label for="numero">Numero</label>
-				    <input type="text" id="numero" class="form-control" placeholder="Ingrese el numero">
-				    <small class="form-text text-muted">Debe ingresar un numero del 1 al 13</small>
+				    <label for="numero">Número</label>
+				    <input type="number" id="numero" min="1" max="13" class="form-control" placeholder="Ingrese el número">
+				    <small class="form-text text-muted">Debe ingresar un número del 1 al 13</small>
 				  </div>
 				  <div class="form-group">
 				    <label for="carta">Carta</label>
-				    <input type="text" id="carta" class="form-control" placeholder="Descripcion de la carta">
+				    <input type="text" id="carta" class="form-control" placeholder="Descripción de la carta">
 				  </div>
 				  <button type="button" id="registrar" class="btn btn-primary">Guardar</button>
 				</form>
@@ -108,7 +114,10 @@
 		</aside>
 	</div>
 </div>
+
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Script propio -->
 <script src="js/script.js"></script>
 </body>
 </html>
